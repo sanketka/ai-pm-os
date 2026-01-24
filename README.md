@@ -5,7 +5,7 @@ An evolving operating system for building B2B products using AI.
 
 This repository organizes product management workflows as discrete "Jobs to Be Done" (JTBD). Each JTBD folder contains the prompts, templates, and instructions needed to complete a specific PM task with AI assistance.
 
-### Problem Brainstorming & PRD Creation
+### JTBD-1: Problem Brainstorming & PRD Creation
 
 **Location:** `jobs-to-be-done/problem-brainstorming-prd/`
 
@@ -38,3 +38,64 @@ This repository organizes product management workflows as discrete "Jobs to Be D
 The goal is not speed. The goal is a PRD that is grounded in reality, aligned to strategy, and ready for engineering execution.
 
 **Philosophy:** This JTBD enforces discovery before drafting, persona-driven requirements, and evidence-based problem framing. It prevents solutioning too early and ensures every feature ties back to real user workflows and business outcomes.
+
+## JTBD-2: Prototype Planning & UX-Constrained Design
+
+**Location:**  `jobs-to-be-done/prototype-planning/`
+
+**Purpose:**  
+Translate an approved PRD into a **clear, flow-by-flow prototype plan** that is grounded in existing UX patterns and ready for design or engineering execution.
+
+This JTBD focuses on *what to build* and *where it fits*, **before** any UI or wireframes are generated. Once that is clear, building he prototype is as easy as typing "Build this now". 
+
+---
+
+### What’s Inside
+
+- **project-instructions.md**  
+  Governing instructions for how the AI should reason during prototype planning. Enforces flow-based thinking, design consistency, and scope discipline.
+
+- **design-context-prompt.md**  
+  Extracts and documents existing UX patterns from product screenshots. Produces a lightweight, implicit design system used to constrain future prototypes.
+
+- **prototype-planning-prompt.md**  
+  Converts the PRD (from JTBD-1 output) into a flow-by-flow breakdown:
+  - user journeys
+  - new vs existing screens
+  - route definitions
+  - UX pattern references
+  - open questions and ambiguities  
+  UI generation is explicitly blocked at this stage.
+
+- **project-inputs.md**  
+  Documents required inputs (PRD from JTBD-1, existing product screenshots, feature-area screenshots, and optional reference UX patterns).
+
+---
+
+### How to Use JTBD-2
+
+1. **Start with the finalized PRD from JTBD-1**  
+   JTBD-2 assumes scope, goals, and requirements are already locked.
+
+2. **Run the Design Context prompt**  
+   Use real product screenshots to extract and document existing UX patterns.  
+   This becomes the constraint system for all future UI work.
+
+3. **Run the Prototype Planning prompt**  
+   Break the PRD into discrete user flows.  
+   Review and approve **one flow at a time** before proceeding.
+
+4. **Only then move to UI generation**  
+   Wireframes, mocks, or v0-style prompts should come *after* this. 
+
+---
+
+### Philosophy
+
+JTBD-2 enforces **structure before pixels** and optimizes for one-shot prototype generation for complicated features. 
+
+It prevents:
+- inconsistent UX
+- scope creep during design
+- premature wireframing
+- silent design assumptions
