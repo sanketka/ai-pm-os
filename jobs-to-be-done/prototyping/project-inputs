@@ -1,0 +1,74 @@
+# Required Inputs (Not Included)
+
+This JTBD assumes access to real product artifacts. You must provide them in your working context.
+
+---
+
+## 1) PRD (from JTBD-1 Output)
+
+**Source**
+- Use the finalized PRD produced as the output of **JTBD-1**
+
+**Purpose**
+- Defines scope, functional requirements, and out-of-scope constraints for prototyping.
+
+**Quality Bar**
+- Clear FRs
+- No unresolved goal-level ambiguity
+
+**If Missing**
+- Prototyping will not proceed.
+
+---
+
+## 2) Existing Screenshots (Feature Area Being Updated)
+
+**Examples**
+- Current UI for the feature
+- Entry points, flows, and end states
+- Ideally name them as they relate to the FR# in the PRD. For example "FR1 - Current List View"
+
+**Purpose**
+- Grounds flows in real navigation and current behavior.
+
+**Quality Bar**
+- Prefer full flows over isolated screens
+
+**If Missing**
+- Flows will be flagged as high-risk assumptions.
+
+---
+
+## 3) Existing Product Screenshots (UX Patterns)
+
+**Examples**
+- Tables, filter bars, detail panels, modals
+- Page layout and navigation patterns
+
+**Purpose**
+- Acts as the de-facto design system for prototype planning.
+
+**Quality Bar**
+- Screens are clearly labeled and representative
+
+**If Missing**
+- UI generation will be blocked until patterns are provided.
+
+---
+
+## 4) Reference UX Screenshots (Optional)
+
+**Examples**
+- Competitor product screenshots
+- Publicly available tools with strong UX
+- UX patterns you want to emulate (workflow, interaction, information hierarchy)
+
+**Purpose**
+- Provides inspiration and alternative patterns when existing UX is insufficient.
+
+**Boundaries**
+- For reference only — not a directive to copy
+- Must be publicly accessible
+
+**If Missing**
+- The system will default to existing product patterns only.
