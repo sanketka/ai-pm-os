@@ -78,3 +78,27 @@ The goal is not speed. The goal is a PRD that is grounded in reality, aligned to
 For best results, provide context on who the primary user is, what area of the product is affected, whether this extends an existing pattern, and any specific error cases to handle.
 
 **Philosophy:** This JTBD enforces a strict separation between Solution (the "what" in 2-4 sentences) and Acceptance Criteria (the engineer's testable checklist). It keeps stories concise, specific about UI copy and state transitions, and sized so an engineer can complete one and say "done."
+
+---
+
+### JTBD-4: Grill UX Mock
+
+**Location:** `jobs-to-be-done/artifact-review/grill-ux-mock/`
+
+**Purpose:** Critique a mockup or wireframe against a requirements file and persona, and produce a prioritized, actionable recommendation table. Works standalone or as a final quality gate after JTBD-2 (Prototype Planning).
+
+**What's Inside:**
+
+- **`SKILL.md`** — A self-contained Claude Skill that loads persona and JTBD context from a requirements file, then grills the mock across four dimensions: UX and interaction patterns, copy and language, persona fit, and polish and consistency. Always outputs a structured recommendation table with exact fixes, not vague suggestions.
+
+**How to Use:**
+
+1. **Download the `artifact-review/grill-ux-mock/` folder** from this repo.
+2. **Zip the folder** into `grill-ux-mock.zip`.
+3. **Upload the zip to Claude** as a custom skill (Settings → Skills).
+4. **Share your mockup and requirements file.** The skill will extract the primary persona and their JTBD, then critique the mock across all four dimensions.
+
+For best results, provide a requirements file (PRD, Jira ticket, user story, or design brief) alongside the mockup. If you are using this after JTBD-2, the approved prototype plan serves as the requirements file.
+
+**Philosophy:** Good UX feedback is specific or it is useless. This JTBD enforces exact recommendations — not "simplify the copy" but the precise replacement string. Every issue is triaged as P0 (blocks the JTBD), P1 (friction before ship), or P2 (polish). Copy is treated as a UX bug, not a writing problem.
+```
